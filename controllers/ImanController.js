@@ -6,20 +6,20 @@ imanController.store = function(req, res, next){
         c1: req.body.c1,
         c2: req.body.c2,
         c3: req.body.c3
-    });
+    })
 
     iman.save(function(err){
         if(err)
         return res.status(400).send({"err": err});
         return res.status(200).json({"message": "creado con exito"});
-    });
+    })
 }
 
 imanController.getImanes = function(req, res, next){
     Iman.find({}, function(err, imanes){
         if(err)
         return res.status(400).send({"err": err});
-        return res.status(400).send({imanes});
+        return res.status(200).send({imanes});
     });
 }
 

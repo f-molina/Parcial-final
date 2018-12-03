@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-const Schema = mongoose;
+const {Schema} = mongoose;
 
 const  imanSchema = new Schema({
-    forma: {type: String, required: true},
-    color: {type: String, required: true},
-    intensidad: {type: Number, require: true}
+    c1: {type: String, required: true},
+    c2: {type: String, required: true},
+    c3: {type: Number, required: true}
 });
 
 module.exports = mongoose.model('imanes', imanSchema);

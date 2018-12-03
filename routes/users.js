@@ -8,3 +8,5 @@ router.get('/imanes', imanController.getImanes);
 router.get('/buscar/:id', imanController.buscar);
 router.delete('/eliminar/:id', imanController.delete);
 router.put('/actualizar/:id', imanController.update);
+
+module.exports = router;
